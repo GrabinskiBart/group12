@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olympic Banners</title>
+    <style>
+        .button {
+        display: inline-block;
+        padding: 10px 20px;
+        margin-top: 20px;
+        background-color: #007BFF;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    .button:hover {
+        background-color: #0056b3;
+    }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden; /* To hide overflow from animation */
+        }
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(270deg, #ff7e5f, #feb47b);
+            animation: gradientAnimation 10s ease infinite;
+            z-index: -1; /* Send background behind banners */
+        }
+        @keyframes gradientAnimation {
+            0% { background: linear-gradient(270deg, #ff7e5f, #feb47b); }
+            50% { background: linear-gradient(270deg, #6a82fb, #fc5c7d); }
+            100% { background: linear-gradient(270deg, #ff7e5f, #feb47b); }
+        }
+        .banner {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 5px solid #000;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin: 20px;
+            width: 300px;
+            display: inline-block;
+        }
+        .olympic-rings {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .ring {
+            width: 30px;
+            height: 30px;
+            border: 5px solid transparent;
+            border-radius: 50%;
+            margin: 0 -5px; /* Negative margin for overlap */
+        }
+        .blue { border-color: #0033A0; }
+        .black { border-color: #000; }
+        .red { border-color: #EF3340; }
+        .yellow { border-color: #FFD100; }
+        .green { border-color: #009639; }
+        h1 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+
+    <!-- Create 5 banners -->
+    <div class="banner">
+        <div class="olympic-rings">
+            <div class="ring blue"></div>
+            <div class="ring black"></div>
+            <div class="ring red"></div>
+            <div class="ring yellow"></div>
+            <div class="ring green"></div>
+        </div>
+        <h1>Welcome to Groups 12th Olympics!</h1>
+        <p>Celebrating sportsmanship and unity.</p>
+            <a href="https://mywordle.strivemath.com/?id=c661739c-bcd7-4390-b878-53091da92d36" target="_blank" class="button">Play Wordle</a>
+    </div>
+
+    <div class="banner">
+        <div class="olympic-rings">
+            <div class="ring blue"></div>
+            <div class="ring black"></div>
+            <div class="ring red"></div>
+            <div class="ring yellow"></div>
+            <div class="ring green"></div>
+        </div>
+        <h1>Join the Games!</h1>
+        <p>Experience the thrill of competition.</p>
+    </div>
+
+    <div class="banner">
+        <div class="olympic-rings">
+            <div class="ring blue"></div>
+            <div class="ring black"></div>
+            <div class="ring red"></div>
+            <div class="ring yellow"></div>
+            <div class="ring green"></div>
+        </div>
+        <h1>Unity in Diversity</h1>
+        <p>Bringing nations together.</p>
+    </div>
+
+    <div class="banner">
+        <div class="olympic-rings">
+            <div class="ring blue"></div>
+            <div class="ring black"></div>
+            <div class="ring red"></div>
+            <div class="ring yellow"></div>
+            <div class="ring green"></div>
+        </div>
+        <h1>Champion Spirit</h1>
+        <p>Embrace the spirit of sportsmanship.</p>
+    </div>
+
+    <div class="banner">
+        <div class="olympic-rings">
+            <div class="ring blue"></div>
+            <div class="ring black"></div>
+            <div class="ring red"></div>
+            <div class="ring yellow"></div>
+            <div class="ring green"></div>
+        </div>
+        <h1>Champion Spirit</h1>
+        <p>Embrace the spirit of sportsmanship.</p>
+    </div>
+    </body>
+</html>
