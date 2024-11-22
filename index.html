@@ -1,38 +1,251 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Basic Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Olympic Banner</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .banner {
+            background-color: #fff;
+            padding: 50px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 50px auto;
+            width: 80%;
+            max-width: 800px;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        .olympic-rings {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .ring {
+            width: 50px;
+            height: 50px;
+            border: 5px solid;
+            border-radius: 50%;
+            margin: -6px; /* Reduced margin to make rings closer */
+            animation: pulse 2s infinite;
+        }
+        .ring.blue { border-color: #00a2e5; }
+        .ring.black { border-color: #000000; }
+        .ring.red { border-color: #ee334e; }
+        .ring.yellow { border-color: #f7d42b; }
+        .ring.green { border-color: #00a859; }
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+        h1 {
+            margin: 20px 0;
+            font-size: 2.5em;
+            color: #333;
+        }
+        p {
+            font-size: 1.2em;
+            color: #666;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #ff0;
+            top: -10px;
+            animation: fall 5s linear infinite;
+        }
+        @keyframes fall {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+         .button {
+        display: inline-block;
+        padding: 10px 20px;
+        margin-top: 20px;
+        background-color: #007BFF;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    .button:hover {
+        background-color: #0056b3;
+    }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden; /* To hide overflow from animation */
+        }
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(270deg, #ff7e5f, #feb47b);
+            animation: gradientAnimation 10s ease infinite;
+            z-index: -1; /* Send background behind banners */
+        }
+        @keyframes gradientAnimation {
+            0% { background: linear-gradient(270deg, #ff7e5f, #feb47b); }
+            50% { background: linear-gradient(270deg, #6a82fb, #fc5c7d); }
+            100% { background: linear-gradient(270deg, #ff7e5f, #feb47b); }
+        }
+        .banner {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 5px solid #000;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin: 20px;
+            width: 300px;
+            display: inline-block;
+        }
+        .olympic-rings {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .ring {
+            width: 30px;
+            height: 30px;
+            border: 5px solid transparent;
+            border-radius: 50%;
+            margin: 0 -5px; /* Negative margin for overlap */
+        }
+        .blue { border-color: #0033A0; }
+        .black { border-color: #000; }
+        .red { border-color: #EF3340; }
+        .yellow { border-color: #FFD100; }
+        .green { border-color: #009639; }
+        h1 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Basic Website</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="about">
-            <h2>About Us</h2>
-            <p>This is a simple website created as an example.</p>
-        </section>
-        <section id="services">
-            <h2>Our Services</h2>
-            <p>We offer a variety of services to help you succeed.</p>
-        </section>
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Email us at: info@example.com</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 My Basic Website</p>
-    </footer>
+
+<div class="banner">
+    <div class="olympic-rings">
+        <div class="ring blue"></div>
+        <div class="ring black"></div>
+        <div class="ring red"></div>
+        <div class="ring yellow"></div>
+        <div class="ring green"></div>
+    </div>
+    
+    <h1>Welcome to Groups 12th Olympics!</h1>
+        <p>Presented by<br> Abdurrahman Faisal, Bartosz Grabinski, Kate Baumgart, Mehar Dhillon,Tife Akintan</p>
+    </div>
+        <div class="banner">
+        <div class="olympic-rings">
+            <div class="ring blue"></div>
+            <div class="ring black"></div>
+            <div class="ring red"></div>
+            <div class="ring yellow"></div>
+            <div class="ring green"></div>
+        </div>
+        <h1>Wordle</h1>
+        <p>Theme: Sleep</p>
+        <a href="https://mywordle.strivemath.com/?id=c661739c-bcd7-4390-b878-53091da92d36" target="_blank" class="button">Play Wordle</a>
+    </div>
+
+    <div class="banner">
+        <div class="olympic-rings">
+            <div class="ring blue"></div>
+            <div class="ring black"></div>
+            <div class="ring red"></div>
+            <div class="ring yellow"></div>
+            <div class="ring green"></div>
+        </div>
+        <h1>Unity in Diversity</h1>
+        <p>Bringing nations together.</p>
+    </div>
+
+    <div class="banner">
+        <div class="olympic-rings">
+            <div class="ring blue"></div>
+            <div class="ring black"></div>
+            <div class="ring red"></div>
+            <div class="ring yellow"></div>
+            <div class="ring green"></div>
+        </div>
+        <h1>Champion Spirit</h1>
+        <p>Embrace the spirit of sportsmanship.</p>
+    </div>
+
+    <div class="banner">
+        <div class="olympic-rings">
+            <div class="ring blue"></div>
+            <div class="ring black"></div>
+            <div class="ring red"></div>
+            <div class="ring yellow"></div>
+            <div class="ring green"></div>
+        </div>
+        <h1>Champion Spirit</h1>
+        <p>Embrace the spirit of sportsmanship.</p>
+    </div>
+</div>
+
+<script>
+    // Function to create confetti elements
+    function createConfetti() {
+        const confetti = document.createElement('div');
+        confetti.classList.add('confetti');
+        confetti.style.left = Math.random() * 100 + 'vw';
+        confetti.style.backgroundColor = getRandomColor();
+        document.body.appendChild(confetti);
+
+        // Remove confetti after animation
+        setTimeout(() => {
+            confetti.remove();
+        }, 5000);
+    }
+
+    // Function to generate random colors
+    function getRandomColor() {
+        const colors = ['#ff0', '#f00', '#0f0', '#00f', '#f0f'];
+        return colors[Math.floor(Math.random() * colors.length)];
+    }
+
+    // Create confetti at intervals
+    setInterval(createConfetti, 300);
+</script>
+
 </body>
 </html>
