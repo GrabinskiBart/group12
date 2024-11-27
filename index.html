@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Olympic Banner</title>
     <style>
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.banner {
+    max-height: 90vh; /* Limit height to 90% of viewport height */
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds max-height */
+}
+
+/* Additional styles for mobile responsiveness */
+@media (max-width: 600px) {
+    .banner {
+        width: 95%; /* Make banners take more width on small screens */
+    }
+}
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
