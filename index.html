@@ -3,266 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olympic Banner</title>
+    <title>Thank You, Teacher</title>
     <style>
-    body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-.banner {
-    max-height: 90vh; /* Limit height to 90% of viewport height */
-    overflow-y: auto; /* Enable vertical scrolling if content exceeds max-height */
-}
-
-/* Additional styles for mobile responsiveness */
-@media (max-width: 600px) {
-    .banner {
-        width: 95%; /* Make banners take more width on small screens */
-    }
-}
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background-color: #ffe4e1;
+            font-family: 'Roboto', sans-serif;
             text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-        .banner {
-            background-color: #fff;
             padding: 50px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin: 50px auto;
-            width: 80%;
-            max-width: 800px;
-            border-radius: 10px;
-            position: relative;
-            overflow: hidden;
         }
-        .olympic-rings {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-        .ring {
-            width: 50px;
-            height: 50px;
-            border: 5px solid;
-            border-radius: 50%;
-            margin: -6px; /* Reduced margin to make rings closer */
-            animation: pulse 2s infinite;
-        }
-        .ring.blue { border-color: #00a2e5; }
-        .ring.black { border-color: #000000; }
-        .ring.red { border-color: #ee334e; }
-        .ring.yellow { border-color: #f7d42b; }
-        .ring.green { border-color: #00a859; }
-        @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.1);
-            }
+        .container {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 40px;
+            max-width: 600px;
+            margin: auto;
+            animation: fadeIn 2s ease-in-out;
         }
         h1 {
-            margin: 20px 0;
-            font-size: 2.5em;
-            color: #333;
+            color: #8a2be2;
+            font-weight: 700;
+            animation: slideIn 1s ease-out;
         }
         p {
-            font-size: 1.2em;
-            color: #666;
+            color: #333;
+            font-size: 18px;
+            animation: fadeIn 2s ease-in-out;
         }
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            margin-top: 20px;
-            background-color: #007BFF;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-        .button:hover {
-            background-color: #0056b3;
-        }
-        .confetti {
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            background-color: #ff0;
-            top: -10px;
-            animation: fall 5s linear infinite;
-        }
-        @keyframes fall {
-            0% {
-                transform: translateY(0) rotate(0deg);
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(100vh) rotate(360deg);
-                opacity: 0;
-            }
-        }
-         .button {
-        display: inline-block;
-        padding: 10px 20px;
-        margin-top: 20px;
-        background-color: #007BFF;
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-    }
-
-    .button:hover {
-        background-color: #0056b3;
-    }
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            overflow: hidden; /* To hide overflow from animation */
-        }
-        .background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(270deg, #ff7e5f, #feb47b);
-            animation: gradientAnimation 10s ease infinite;
-            z-index: -1; /* Send background behind banners */
-        }
-        @keyframes gradientAnimation {
-            0% { background: linear-gradient(270deg, #ff7e5f, #feb47b); }
-            50% { background: linear-gradient(270deg, #6a82fb, #fc5c7d); }
-            100% { background: linear-gradient(270deg, #ff7e5f, #feb47b); }
-        }
-        .banner {
-            background-color: rgba(255, 255, 255, 0.8);
-            border: 5px solid #000;
-            padding: 20px;
-            text-align: center;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        .book {
+            width: 100px;
             margin: 20px;
-            width: 300px;
-            display: inline-block;
+            animation: bounce 2s infinite;
         }
-        .olympic-rings {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-            position: relative;
+        button {
+            background-color: #8a2be2;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            animation: fadeIn 3s ease-in-out;
+            transition: background-color 0.3s;
         }
-        .ring {
-            width: 30px;
-            height: 30px;
-            border: 5px solid transparent;
-            border-radius: 50%;
-            margin: 0 -5px; /* Negative margin for overlap */
+        button:hover {
+            background-color: #7a1fa2;
         }
-        .blue { border-color: #0033A0; }
-        .black { border-color: #000; }
-        .red { border-color: #EF3340; }
-        .yellow { border-color: #FFD100; }
-        .green { border-color: #009639; }
-        h1 {
-            margin: 0;
-            font-size: 1.5em;
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-20px); }
+            to { transform: translateY(0); }
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
         }
     </style>
+    <script>
+        function changeMessage() {
+            const messages = [
+                "Your dedication is inspiring!",
+                "Thank you for making a difference!",
+                "We are grateful for your wisdom!"
+            ];
+            const messageElement = document.getElementById('dynamicMessage');
+            messageElement.innerText = messages[Math.floor(Math.random() * messages.length)];
+        }
+    </script>
 </head>
 <body>
-
-<div class="banner">
-    <div class="olympic-rings">
-        <div class="ring blue"></div>
-        <div class="ring black"></div>
-        <div class="ring red"></div>
-        <div class="ring yellow"></div>
-        <div class="ring green"></div>
-    </div>
-    
-    <h1>Welcome to Groups 12th Olympics!</h1>
-        <p>Presented by<br> Abdurrahman Faisal, Bartosz Grabinski, Kate Baumgart, Mehar Dhillon,Tife Akintan</p>
-    </div>
-        <div class="banner">
-        <div class="olympic-rings">
-            <div class="ring blue"></div>
-            <div class="ring black"></div>
-            <div class="ring red"></div>
-            <div class="ring yellow"></div>
-            <div class="ring green"></div>
-        </div>
-        <h1>Group Hang-Man</h1>
-      
-        <a href="https://hangmanonline.io/KFSNYTMA2S" target="_blank" class="button">Play Hang-Man</a>
-    </div>
-
-    <div class="banner">
-        <div class="olympic-rings">
-            <div class="ring blue"></div>
-            <div class="ring black"></div>
-            <div class="ring red"></div>
-            <div class="ring yellow"></div>
-            <div class="ring green"></div>
-        </div>
-        <h1>Wordle</h1>
+    <div class="container">
+        <h1>Thank You, Ester and Sophie!</h1>
+        <p id="dynamicMessage">Your guidance and support have been invaluable. We appreciate all that you do!</p>
        
-        <a href="https://mywordle.strivemath.com/?id=8cd05550-3b47-45ee-9f0e-0213212b2667" target="_blank" class="button">Play Wordle</a>
+        <button onclick="changeMessage()">Change Message</button>
     </div>
-
-    <div class="banner">
-        <div class="olympic-rings">
-            <div class="ring blue"></div>
-            <div class="ring black"></div>
-            <div class="ring red"></div>
-            <div class="ring yellow"></div>
-            <div class="ring green"></div>
-        </div>
-        <h1>Word Search</h1>
-        
-        <a href="https://thewordsearch.com/puzzle/7790401/group-12-time-management-word-search/" target="_blank" class="button">Play A Word Search</a>
-    </div>
-
-    <div class="banner">
-        <div class="olympic-rings">
-            <div class="ring blue"></div>
-            <div class="ring black"></div>
-            <div class="ring red"></div>
-            <div class="ring yellow"></div>
-            <div class="ring green"></div>
-        </div>
-        <h1>CrossWord</h1>
-        <a href="https://puzzel.org/en/crossword/play?p=-OCf_IOXqr8Pig5q1Ylw" target="_blank" class="button">Play A Cross Word</a>
-    </div>
-</div>
-
-<script>
-    // Function to create confetti elements
-    function createConfetti() {
-        const confetti = document.createElement('div');
-        confetti.classList.add('confetti');
-        confetti.style.left = Math.random() * 100 + 'vw';
-        confetti.style.backgroundColor = getRandomColor();
-        document.body.appendChild(confetti);
-
-        // Remove confetti after animation
-        setTimeout(() => {
-            confetti.remove();
-        }, 5000);
-    }
-
-    // Function to generate random colors
-    function getRandomColor() {
-        const colors = ['#ff0', '#f00', '#0f0', '#00f', '#f0f'];
-        return colors[Math.floor(Math.random() * colors.length)];
-    }
-
-    // Create confetti at intervals
-    setInterval(createConfetti, 300);
-</script>
+</body>
+</html>
 
 </body>
 </html>
